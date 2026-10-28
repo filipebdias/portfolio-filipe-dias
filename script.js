@@ -187,7 +187,7 @@
 
   /* ---------- botões magnéticos ---------- */
   if (finePointer && !reduce) {
-    document.querySelectorAll('.btn, .nav-cta, .wa-float').forEach(function (b) {
+    document.querySelectorAll('.btn, .nav-cta').forEach(function (b) {
       b.addEventListener('pointermove', function (e) {
         var r = b.getBoundingClientRect();
         var x = e.clientX - r.left - r.width / 2, y = e.clientY - r.top - r.height / 2;

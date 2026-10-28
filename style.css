@@ -246,16 +246,6 @@ h2 { font-size: clamp(2rem, 4.5vw, 3.4rem); font-weight: 600; max-width: 18ch; }
 /* footer */
 .footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding-bottom: 40px; color: var(--muted); font-size: .85rem; }
 
-/* whatsapp flutuante */
-.wa-float {
-  position: fixed; right: 20px; bottom: 20px; z-index: 20;
-  width: 56px; height: 56px; border-radius: 50%;
-  display: grid; place-items: center;
-  background: #25d366; color: #fff;
-  box-shadow: 0 10px 30px rgba(37,211,102,.35);
-  transition: transform .2s;
-}
-.wa-float:hover { transform: scale(1.08); }
 
 /* responsivo */
 @media (max-width: 960px) {
@@ -453,8 +443,6 @@ body::before { transform: translate3d(calc(var(--mx, 0) * -14px), calc(var(--my,
 .btn-primary { box-shadow: 0 0 0 0 rgba(198,255,61,0); transition: transform .2s, box-shadow .35s; }
 .btn-primary:hover { box-shadow: 0 0 34px 4px rgba(198,255,61,.45); }
 .btn-ghost:hover { border-color: var(--accent); color: var(--accent); box-shadow: inset 0 0 20px rgba(198,255,61,.12); }
-.wa-float::before { content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid #25d366; animation: ping 2.4s var(--ease-out) infinite; }
-@keyframes ping { from { transform: scale(1); opacity: .8; } to { transform: scale(1.8); opacity: 0; } }
 
 /* marquee reage à velocidade da rolagem */
 .marquee { transform: skewX(var(--skew, 0deg)); transition: transform .4s var(--ease-out); }
