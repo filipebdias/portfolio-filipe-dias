@@ -9,8 +9,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__fx)document.documentElement.classList.remove('js')},3000)</script>
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <!-- abertura: tela de "inicialização" que se abre pro site -->
+  <div class="boot" aria-hidden="true">
+    <div class="boot-inner">
+      <p class="boot-line">Filipe Dias · sistema de tráfego</p>
+      <p class="boot-count"><span data-boot-count>00</span>%</p>
+      <div class="boot-bar"><i></i></div>
+      <p class="boot-line boot-status" data-boot-status>carregando campanhas</p>
+    </div>
+  </div>
+  <div class="progress" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><span class="cursor-ring"></span><span class="cursor-dot"></span></div>
   <div class="glow" aria-hidden="true"></div>
 
   <header class="nav">
@@ -26,8 +40,16 @@
   <main id="topo">
     <!-- HERO -->
     <section class="hero">
+      <canvas class="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hud" aria-hidden="true">
+        <span class="hud-tl">SYS.ONLINE</span>
+        <span class="hud-tr" data-clock>PMW 00:00:00</span>
+        <span class="hud-bl">10.18°S · 48.33°W</span>
+        <span class="hud-br">ROAS ▲</span>
+      </div>
       <p class="tag"><span class="dot"></span>Disponível para novos projetos</p>
-      <h1>Anúncio bom é o que <em>vende</em>.</h1>
+      <h1 data-scramble>Anúncio bom é o que <em class="glitch" data-text="vende">vende</em>.</h1>
       <p class="lead">Sou o <strong>Filipe Dias</strong>, gestor de tráfego pago na agência 4Ads, em Palmas/TO. Coloco campanhas no ar no Meta e no Google, monto as páginas que recebem esse público e acompanho os números até o resultado aparecer: ingresso vendido, mesa cheia, lead no WhatsApp.</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="https://wa.me/5563984969981?text=Ol%C3%A1%20Filipe%2C%20vi%20seu%20portf%C3%B3lio%20e%20quero%20conversar%20sobre%20an%C3%BAncios." target="_blank" rel="noopener">Chamar no WhatsApp</a>
